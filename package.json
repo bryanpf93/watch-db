@@ -10,13 +10,22 @@
     "lint:fix": "eslint --fix .",
     "preview": "vite preview",
     "format:check": "prettier --check .",
-    "format:fix": "prettier --write ."
+    "format:fix": "prettier --write .",
+    "prepare": "husky",
+    "typescript:check": "tsc -p tsconfig.app.json --noEmit"
   },
   "dependencies": {
     "react": "^19.2.5",
     "react-dom": "^19.2.5"
   },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --fix"
+    ]
+  },
   "devDependencies": {
+    "@commitlint/cli": "^20.5.2",
+    "@commitlint/config-conventional": "^20.5.0",
     "@eslint/js": "^10.0.1",
     "@types/node": "^24.12.2",
     "@types/react": "^19.2.14",
@@ -28,6 +37,8 @@
     "eslint-plugin-react-refresh": "^0.5.2",
     "eslint-plugin-simple-import-sort": "^13.0.0",
     "globals": "^17.5.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.4.0",
     "prettier": "^3.8.3",
     "typescript": "~6.0.2",
     "typescript-eslint": "^8.58.2",
