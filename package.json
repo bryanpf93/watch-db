@@ -15,8 +15,10 @@
     "typescript:check": "tsc -p tsconfig.app.json --noEmit"
   },
   "dependencies": {
+    "@tanstack/react-query": "^5.100.6",
     "react": "^19.2.5",
-    "react-dom": "^19.2.5"
+    "react-dom": "^19.2.5",
+    "styled-components": "^6.4.1"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
@@ -27,10 +29,12 @@
     "@commitlint/cli": "^20.5.2",
     "@commitlint/config-conventional": "^20.5.0",
     "@eslint/js": "^10.0.1",
+    "@tanstack/eslint-plugin-query": "^5.100.6",
     "@types/node": "^24.12.2",
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
     "@vitejs/plugin-react": "^6.0.1",
+    "axios": "^1.15.2",
     "eslint": "^10.2.1",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-react-hooks": "^7.1.1",
