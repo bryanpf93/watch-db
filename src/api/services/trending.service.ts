@@ -14,5 +14,5 @@ const trendingMapper = (item: TrendingItemResponse): Media => {
 export const getTrending = async (): Promise<Media[]> => {
   const response = await api.get<TrendingResponse>("/trending/all/week");
 
-  return response.data.results.map(trendingMapper);
+  return response.data.results.map((item) => trendingMapper(item));
 };
