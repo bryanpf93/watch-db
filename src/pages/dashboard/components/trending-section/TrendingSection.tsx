@@ -18,11 +18,24 @@ export const TrendingSection = () => {
     );
   }
 
+  const handleCardClick = () => {
+    // navegar a detalle
+    //console.log("Card clicked:");
+  };
+
+  const handleCardFavorite = () => {
+    // handle favorite
+    // api {favorite: true/false}
+    //console.log("Card favorite:");
+  };
+
   return (
     <div>
       <h2>{Translations.trending_section.title}</h2>
       {trendingData?.map((media) => (
         <Card
+          onClick={handleCardClick}
+          onFavorite={handleCardFavorite}
           key={media.id}
           title={media.title}
           poster={media.poster}
