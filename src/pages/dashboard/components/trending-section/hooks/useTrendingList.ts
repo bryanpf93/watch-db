@@ -6,7 +6,7 @@ import type { Media } from "@/types/Media";
 type UseTrendingListReturn = {
   trendingData?: Media[];
   isLoading: boolean;
-  error?: Error;
+  error: Error | null;
   refetch: () => void;
 };
 
