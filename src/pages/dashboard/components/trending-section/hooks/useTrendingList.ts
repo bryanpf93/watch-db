@@ -11,15 +11,11 @@ type UseTrendingListReturn = {
 };
 
 export const useTrendingList = (): UseTrendingListReturn => {
-  const {
-    data: trendingData,
-    isLoading,
-    error,
-    refetch
-  } = useQuery<Media[]>({
+  const query = useQuery<Media[]>({
     queryKey: ["trending"],
     queryFn: getTrending
   });
+  const { data: trendingData, isLoading, error, refetch } = query;
 
   return {
     trendingData,
