@@ -6,9 +6,9 @@ import type { Media } from "@/types/Media";
 const trendingMapper = (item: TrendingItemResponse): Media => {
   return {
     id: item.id.toString(),
+    first_air_date: item.first_air_date,
     title: item.title,
-    poster: item.poster_path ? `${Config.API_IMAGE_BASE_URL}${item.poster_path}` : "",
-    first_air_date: item.first_air_date
+    poster: item.poster_path ? `${Config.API_IMAGE_BASE_URL}${item.poster_path}` : ""
   };
 };
 
